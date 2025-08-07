@@ -1,0 +1,77 @@
+/* Use the Inter font family */
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f8fafc; /* slate-50 */
+}
+
+/* Custom styles for Material 3-like components and transitions */
+.sidebar-transition {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+}
+
+.main-content-transition {
+  transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Styling for the active navigation link */
+.nav-link.active {
+  background-color: #e0e7ff; /* indigo-100 */
+  color: #4338ca; /* indigo-800 */
+  font-weight: 600;
+}
+.nav-link.active i {
+  color: #4338ca; /* indigo-800 */
+}
+
+/* Smooth submenu animations */
+.submenu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+.submenu.open {
+  max-height: 500px; /* Adjust as needed */
+}
+
+/* Dropdown animation */
+.dropdown-menu {
+  transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+  transform-origin: top right;
+}
+
+/* Custom focus styles for better accessibility */
+.focus-ring:focus-visible {
+  outline: 2px solid #4f46e5; /* indigo-600 */
+  outline-offset: 2px;
+}
+
+/* Mobile overlay */
+.mobile-overlay {
+  background: rgba(0, 0, 0, 0.4);
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* --- Custom Slim & Cool Scrollbar for Sidebar --- */
+
+/* 1. Set the width of the scrollbar */
+#sidebar nav::-webkit-scrollbar {
+  width: 10px; /* Adjust for a slimmer or wider scrollbar */
+}
+
+/* 2. Style the track (the background of the scrollbar) */
+#sidebar nav::-webkit-scrollbar-track {
+  background: transparent; /* Makes the track invisible */
+}
+
+/* 3. Style the thumb (the draggable handle) */
+#sidebar nav::-webkit-scrollbar-thumb {
+  background-color: #a7b5c7; /* A nice, soft slate color */
+  border-radius: 20px; /* Makes the thumb fully rounded */
+  /* Creates a "padding" effect so the thumb doesn't touch the edge */
+  border: 3px solid #f8fafc; /* Use your main background color (slate-50) */
+}
+
+/* 4. Style the thumb on hover for better UX */
+#sidebar nav::-webkit-scrollbar-thumb:hover {
+  background-color: #64748b; /* Darkens the thumb on hover (slate-500) */
+}
