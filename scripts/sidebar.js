@@ -178,3 +178,45 @@ class DashboardManager {
 document.addEventListener("DOMContentLoaded", () => {
   new DashboardManager();
 });
+
+// Toggle the opening and aplication in dashboard
+
+// Get references to the buttons and content sections
+const openingsBtn = document.getElementById("openings-btn");
+const applicantsBtn = document.getElementById("applicants-btn");
+const openingsContent = document.getElementById("openings-content");
+const applicantsContent = document.getElementById("applicants-content");
+
+// Define the style classes for active and inactive buttons
+const activeClasses = ["bg-orange-500", "text-white", "shadow"];
+const inactiveClasses = ["text-gray-600"];
+
+// Add a click event listener to the Openings button
+openingsBtn.addEventListener("click", () => {
+  // Show openings content and hide applicants content
+  openingsContent.classList.remove("hidden");
+  applicantsContent.classList.add("hidden");
+
+  // Style the Openings button as active
+  openingsBtn.classList.add(...activeClasses);
+  openingsBtn.classList.remove(...inactiveClasses);
+
+  // Style the Applicants button as inactive
+  applicantsBtn.classList.add(...inactiveClasses);
+  applicantsBtn.classList.remove(...activeClasses);
+});
+
+// Add a click event listener to the Applicants button
+applicantsBtn.addEventListener("click", () => {
+  // Show applicants content and hide openings content
+  applicantsContent.classList.remove("hidden");
+  openingsContent.classList.add("hidden");
+
+  // Style the Applicants button as active
+  applicantsBtn.classList.add(...activeClasses);
+  applicantsBtn.classList.remove(...inactiveClasses);
+
+  // Style the Openings button as inactive
+  openingsBtn.classList.add(...inactiveClasses);
+  openingsBtn.classList.remove(...activeClasses);
+});

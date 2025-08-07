@@ -71,7 +71,9 @@ body {
   border: 3px solid #f8fafc; /* Use your main background color (slate-50) */
 }
 
-/* 4. Style the thumb on hover for better UX */
-#sidebar nav::-webkit-scrollbar-thumb:hover {
-  background-color: #64748b; /* Darkens the thumb on hover (slate-500) */
+
+body::-webkit-scrollbar {
+  width: 10px;
 }
+
+
